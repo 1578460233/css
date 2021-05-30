@@ -1,0 +1,221 @@
+/* 这是注释 */
+
+span {
+  color: red;
+  /* 标签选择器 */
+}
+
+.lei {
+  color: pink;
+  /* 类选择器 */
+}
+
+#id {
+  color: blue;
+  /* id选择器 */
+}
+
+.lei2 {
+  /* 字体加粗 */
+  font-weight: 800;
+}
+
+* {
+  /* 通配符选择器（选择所有） */
+  margin: 0;
+  /* 外边距内边距0 */
+  padding: 0;
+}
+
+.ff {
+  font-family: "微软雅黑";
+  /* 字体 */
+  font-size: 20px;
+  /* 字的大小 */
+  font-weight: 700;
+  /* 字体加粗 700是粗 400是细 */
+  font-style: italic;
+  /* 字体风格 italic斜体 normal默认 */
+}
+
+.wbsx {
+  color: blueviolet;
+  color: #fff;
+  color: rgba(255, 61, 26, 1);
+  /* 文字颜色的三种设置方式 */
+  text-align: center;
+  /* 文本对齐方式（水平） center left right*/
+  text-decoration: underline;
+  /* 装饰文本  none默认 underline下划线 overline上划线 line-through删除线*/
+  text-indent: 2em;
+  /* 首行缩进2字符 */
+  line-height: 40px;
+  /* 行高 */
+}
+
+/* 复合选择器 
+1.后代选择器
+2.子选择器
+3.并集选择器
+4.伪类选择器
+*/
+
+ul li {
+  /* 后代选择器，意思是ul所有下级的所有li */
+}
+
+ul>li {
+  /* 自代选择器，意思是只选中ul下一级的li */
+}
+
+div, span {
+  /* 并集选择器（选中div和span） */
+}
+
+a:link {
+  /* 链接伪类选择器
+  link选择所有未被访问的链接
+  visited选择所有已被访问的链接
+  hover鼠标位于之上的链接
+  active鼠标按下未弹起时
+   */
+}
+
+input:focus {
+  /* input 选择有焦点的元素 */
+}
+
+/* 块元素：单独占用一行,如h1，p，div，ul，ol，li等等
+  行内元素：用多少占多少，不占用一行，如，a，i，b，span等等
+  行内块元素：有块级元素和行内元素的某些特点，如img，input，td
+  可以设置样式转变元素
+  display: block;转变块元素
+  display: inline;转变行元素
+  display: inline-block;转变行内块元素
+*/
+
+/* css背景 
+  三种设置方法
+  background-color: #fff;
+  background-color: rgba(0, 0, 0, 1);
+  background-color: red;
+  background-color: transparent;（默认透明）
+  背景图片和尺寸
+  background-image: url("路径");
+  background-size: 100%;背景图片铺满盒子
+  背景平铺
+  background-repeat: no-repeat;（不平铺）
+  背景图片位置
+  background-position: 0 0;
+  背景图片附着，不滚动下去
+  background-attachment: fixed;
+  背景透明
+  background-color: rgba(0, 0, 0, 1);（这个1就是不透明，0就是透明，可以设置0.5）
+*/
+
+/* 
+css的特性
+层叠性：会覆盖样式
+继承性：父元素的某些属性会继承给子元素
+优先级：根据权重优先
+*/
+
+.border {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  border-radius: 50%;
+  /* 角，圆，设置高度的一半是按钮圆角 */
+  /* 1px 实线 颜色 */
+  /* 边框会占用盒子模型 */
+}
+
+/* border-collapse: collapse  表示相邻的表格边框合并  */
+
+/* padding 盒子内边距，会撑大盒子/除非没有width属性  四个属性，上右下左 */
+
+/* margin 盒子外边距 四个属性，上右下左  常用margin 0 auto 水平居中*/
+
+/* 外边距塌陷问题解决方法 上边框，内边距 overflow */
+
+/* 盒子阴影 box-shadow: 水平 垂直 模糊距离 阴影尺寸 阴影颜色 inset改为内部阴影; */
+
+/* 文字阴影 text-shadow: 水平 垂直 模糊距离 颜色 */
+
+/* 浮动  float: left; */
+
+/* 清除浮动四个方法
+1.额外标签法
+2.overflow
+3.after伪元素
+4.双伪元素
+*/
+
+.border::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* after伪元素 */
+
+.border::after, .border::before {
+  content: "";
+  display: table;
+}
+
+.border::after {
+  clear: both;
+}
+
+/* 双伪元素 */
+
+/* 定位 position （子绝父相）
+1.静态定位：static（默认）
+2.相对定位 relative
+3.绝对定位 absolute
+4.固定定位 fixed
+5.粘性定位 sticky
+定位叠放顺序 z-index: 1;
+定位浮动都会让盒子变成行内块元素
+*/
+
+/* css显示与隐藏
+  display: none;
+  visibility: hidden;
+  overflow: hidden;
+*/
+
+/* css鼠标样式 cursor
+1.default默认
+2.pointer小手
+3.move移动
+4.text文本
+5.not-allowed禁止
+*/
+
+input {
+  outline: none;
+  
+  /* 去除输入框选中蓝线 */
+}
+
+/* vertical-align   只对行内或者行内块元素有效
+bottom 图片和文字底线对齐
+middle  图片和文字居中对齐 */
+
+/* 溢出隐藏省略号
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  两行溢出省略
+  letter-spacing: 0;
+      overflow: hidden;
+      display: -webkit-box;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2; 
+      -webkit-box-orient: vertical;
+      font-size:12px;
+*/
