@@ -54,6 +54,15 @@ span {
   line-height:1;
   /*取消行高上下空隙*/
 }
+/*
+继承
+css子元素可以继承父元素的某些特性
+color font-style font-weight font-size font-family text-align text-indent line-height
+妙用
+调试器中 看样式颜色为灰色则没有被继承
+直接给ul设置 list-style 可以去除默认样式
+body设置font-size 可以统一浏览器默认文字大小
+*/
 
 /* 复合选择器 
 1.后代选择器
