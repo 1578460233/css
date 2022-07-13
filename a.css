@@ -71,6 +71,12 @@ body设置font-size 可以统一浏览器默认文字大小
 4.伪类选择器
 */
 
+/*
+属性选择器
+input[type="text"]{} 选中值为text的type属性input
+input[type]{} 选中有type属性的input 
+*/
+
 ul li {
   /* 后代选择器，意思是ul所有下级的所有li */
 }
