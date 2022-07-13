@@ -171,6 +171,10 @@ css的特性
 }
 
 /* after伪元素 */
+/*
+伪元素必须有content内容
+伪元素创建出来是行内元素
+*/
 
 .border::after, .border::before {
   content: "";
